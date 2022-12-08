@@ -1,7 +1,7 @@
 import numpy as np
 import numpy.testing as npt
 import csv
-from plotchecker import LinePlotChecker
+# from plotchecker import LinePlotChecker
 usernamefile = open('usernames.csv', 'r')
 usernames = list(csv.reader(usernamefile))[0]
 usernamefile.close()
@@ -118,39 +118,39 @@ def question2a(x):
         return 1
         
         
-def question2a_plot(_globals):
-    t = [[1.0, 0.3535533905932738, 2.041077998578922e-17, -0.17677669529663687, -0.2, -0.11785113019775795, -2.6242431410300424e-17, 0.08838834764831842, 0.1111111111111111, 0.07071067811865477, 2.783288179880348e-17, -0.05892556509887889, -0.07692307692307693, -0.050507627227610506, -2.857509198010491e-17, 0.04419417382415916, 0.058823529411764705]]
-    x = np.arange(17).reshape(1, 17)
-    pc = LinePlotChecker(_globals["ax"])
-    try:
-        pc.assert_x_data_allclose(x)
-    except:
-        score = 0
-        print('Incorrect horizontal coordinates')
-    else:
-        score = 1
-        print('Correct horizontal coordinates')
-    try:
-        pc.assert_y_data_allclose(t)
-    except:
-        score = 0
-        print('Incorrect vertical coordinates')
-    else:
-        score *= 1
-        print('Correct vertical coordinates')
-    try:
-        pc.assert_markers_equal(['.'])
-    except:
-        score = 0
-        print('This does not seem to be a point plot')
-    else:
-        score *= 1
-        print('This seems to be a point plot')
-    if score==1:
-        print('Plot correct!!')
-    else:
-        print('Plot incorrect!!')
-    return score
+# def question2a_plot(_globals):
+#     t = [[1.0, 0.3535533905932738, 2.041077998578922e-17, -0.17677669529663687, -0.2, -0.11785113019775795, -2.6242431410300424e-17, 0.08838834764831842, 0.1111111111111111, 0.07071067811865477, 2.783288179880348e-17, -0.05892556509887889, -0.07692307692307693, -0.050507627227610506, -2.857509198010491e-17, 0.04419417382415916, 0.058823529411764705]]
+#     x = np.arange(17).reshape(1, 17)
+#     pc = LinePlotChecker(_globals["ax"])
+#     try:
+#         pc.assert_x_data_allclose(x)
+#     except:
+#         score = 0
+#         print('Incorrect horizontal coordinates')
+#     else:
+#         score = 1
+#         print('Correct horizontal coordinates')
+#     try:
+#         pc.assert_y_data_allclose(t)
+#     except:
+#         score = 0
+#         print('Incorrect vertical coordinates')
+#     else:
+#         score *= 1
+#         print('Correct vertical coordinates')
+#     try:
+#         pc.assert_markers_equal(['.'])
+#     except:
+#         score = 0
+#         print('This does not seem to be a point plot')
+#     else:
+#         score *= 1
+#         print('This seems to be a point plot')
+#     if score==1:
+#         print('Plot correct!!')
+#     else:
+#         print('Plot incorrect!!')
+#     return score
 
         
 def question2b(x):
@@ -165,39 +165,39 @@ def question2b(x):
         return 1
         
         
-def question2b_plot(_globals):
-    t = [[5.0, 1.6666666666666667, 2.5, 2.142857142857143, 2.2727272727272725, 2.2222222222222223, 2.2413793103448274, 2.2340425531914896, 2.236842105263158, 2.235772357723577, 2.2361809045226133]]
-    x = np.arange(11).reshape(1, 11)
-    pc = LinePlotChecker(_globals["ax"])
-    try:
-        pc.assert_x_data_allclose(x)
-    except:
-        score = 0
-        print('Incorrect horizontal coordinates')
-    else:
-        score = 1
-        print('Correct horizontal coordinates')
-    try:
-        pc.assert_y_data_allclose(t)
-    except:
-        score = 0
-        print('Incorrect vertical coordinates')
-    else:
-        score *= 1
-        print('Correct vertical coordinates')
-    try:
-        pc.assert_markers_equal([''])
-    except:
-        score = 0
-        print('This does not seem to be a line plot')
-    else:
-        score *= 1
-        print('This seems to be a line plot')
-    if score==1:
-        print('Plot correct!!')
-    else:
-        print('Plot incorrect!!')
-    return score  
+# def question2b_plot(_globals):
+#     t = [[5.0, 1.6666666666666667, 2.5, 2.142857142857143, 2.2727272727272725, 2.2222222222222223, 2.2413793103448274, 2.2340425531914896, 2.236842105263158, 2.235772357723577, 2.2361809045226133]]
+#     x = np.arange(11).reshape(1, 11)
+#     pc = LinePlotChecker(_globals["ax"])
+#     try:
+#         pc.assert_x_data_allclose(x)
+#     except:
+#         score = 0
+#         print('Incorrect horizontal coordinates')
+#     else:
+#         score = 1
+#         print('Correct horizontal coordinates')
+#     try:
+#         pc.assert_y_data_allclose(t)
+#     except:
+#         score = 0
+#         print('Incorrect vertical coordinates')
+#     else:
+#         score *= 1
+#         print('Correct vertical coordinates')
+#     try:
+#         pc.assert_markers_equal([''])
+#     except:
+#         score = 0
+#         print('This does not seem to be a line plot')
+#     else:
+#         score *= 1
+#         print('This seems to be a line plot')
+#     if score==1:
+#         print('Plot correct!!')
+#     else:
+#         print('Plot incorrect!!')
+#     return score  
     
     
 def question2c(x):
@@ -256,42 +256,42 @@ def question2e_iii(x):
         print("Question 2(e-iii) is correct!!")
         return 1
         
-def question2e_plot(_globals):
-    t1 = [4.0, 2.666666666666667, 3.466666666666667, 2.8952380952380956, 3.3396825396825403, 2.9760461760461765, 3.2837384837384844, 3.017071817071818, 3.2523659347188767, 3.0418396189294032, 3.232315809405594, 3.058402765927333, 3.2184027659273333, 3.0702546177791854, 3.208185652261944, 3.079153394197428, 3.200365515409549, 3.0860798011238346, 3.1941879092319425, 3.09162380666784, 3.189184782277596]
-    t2 = [2.0, 2.6666666666666665, 2.933333333333333, 3.0476190476190474, 3.098412698412698, 3.121500721500721, 3.132156732156732, 3.1371295371295367, 3.1394696806461506, 3.140578169680336, 3.141106021601377, 3.1413584725201353, 3.1414796489611394, 3.1415379931734746, 3.1415661593449467, 3.1415797881375944, 3.1415863960370602, 3.141589605588229, 3.1415911669915006, 3.1415919276751456, 3.1415922987403384]
-    t3 = [3.4641016151377544, 3.0792014356780038, 3.156181471569954, 3.13785289159568, 3.1426047456630846, 3.141308785462883, 3.1416743126988376, 3.141568715941784, 3.141599773811506, 3.14159051093808, 3.1415933045030817, 3.1415924542876463, 3.14159271502038, 3.141592634547314, 3.141592659521714, 3.1415926517339976, 3.1415926541725754, 3.1415926534061653, 3.1415926536478262, 3.1415926535714034, 3.141592653595635]
-    t = [t1, t2, t3]
-    x = np.asarray([np.arange(21), np.arange(21), np.arange(21)])#
-    pc = LinePlotChecker(_globals["ax"])
-    try:
-        pc.assert_x_data_allclose(x)
-    except:
-        score = 0
-        print('Incorrect horizontal coordinates')
-    else:
-        score = 1
-        print('Correct horizontal coordinates')
-    try:
-        pc.assert_y_data_allclose(t)
-    except:
-        score = 0
-        print('Incorrect vertical coordinates')
-    else:
-        score *= 1
-        print('Correct vertical coordinates')
-    try:
-        pc.assert_markers_equal(['','',''])
-    except:
-        score = 0
-        print('This does not seem to be a line plot')
-    else:
-        score *= 1
-        print('This seems to be a line plot')
-    if score==1:
-        print('Plot correct!!')
-    else:
-        print('Plot incorrect!!')
-    return score  
+# def question2e_plot(_globals):
+#     t1 = [4.0, 2.666666666666667, 3.466666666666667, 2.8952380952380956, 3.3396825396825403, 2.9760461760461765, 3.2837384837384844, 3.017071817071818, 3.2523659347188767, 3.0418396189294032, 3.232315809405594, 3.058402765927333, 3.2184027659273333, 3.0702546177791854, 3.208185652261944, 3.079153394197428, 3.200365515409549, 3.0860798011238346, 3.1941879092319425, 3.09162380666784, 3.189184782277596]
+#     t2 = [2.0, 2.6666666666666665, 2.933333333333333, 3.0476190476190474, 3.098412698412698, 3.121500721500721, 3.132156732156732, 3.1371295371295367, 3.1394696806461506, 3.140578169680336, 3.141106021601377, 3.1413584725201353, 3.1414796489611394, 3.1415379931734746, 3.1415661593449467, 3.1415797881375944, 3.1415863960370602, 3.141589605588229, 3.1415911669915006, 3.1415919276751456, 3.1415922987403384]
+#     t3 = [3.4641016151377544, 3.0792014356780038, 3.156181471569954, 3.13785289159568, 3.1426047456630846, 3.141308785462883, 3.1416743126988376, 3.141568715941784, 3.141599773811506, 3.14159051093808, 3.1415933045030817, 3.1415924542876463, 3.14159271502038, 3.141592634547314, 3.141592659521714, 3.1415926517339976, 3.1415926541725754, 3.1415926534061653, 3.1415926536478262, 3.1415926535714034, 3.141592653595635]
+#     t = [t1, t2, t3]
+#     x = np.asarray([np.arange(21), np.arange(21), np.arange(21)])#
+#     pc = LinePlotChecker(_globals["ax"])
+#     try:
+#         pc.assert_x_data_allclose(x)
+#     except:
+#         score = 0
+#         print('Incorrect horizontal coordinates')
+#     else:
+#         score = 1
+#         print('Correct horizontal coordinates')
+#     try:
+#         pc.assert_y_data_allclose(t)
+#     except:
+#         score = 0
+#         print('Incorrect vertical coordinates')
+#     else:
+#         score *= 1
+#         print('Correct vertical coordinates')
+#     try:
+#         pc.assert_markers_equal(['','',''])
+#     except:
+#         score = 0
+#         print('This does not seem to be a line plot')
+#     else:
+#         score *= 1
+#         print('This seems to be a line plot')
+#     if score==1:
+#         print('Plot correct!!')
+#     else:
+#         print('Plot incorrect!!')
+#     return score  
     
 def question3_a(x):
     try:
